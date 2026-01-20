@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Auth</title>
+
+<!-- sdn Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+<!-- custom css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="login-container">
+
+    <!-- anchor -->
+    <span id="signin" class="anchor"></span>
+    <span id="signup" class="anchor"></span>
+
+    <!-- SIGN IN -->
+    <section class="view view-signin">
+      <div class="login-icon">
+        <i class="fa-brands fa-github"></i>
+      </div>
+
+      <h2 class="login-topic">Sign in to GitHub</h2>
+
+      <form method="post" action="#">
+        <label for="username">Username or email address</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your username" />
+
+        <div class="label-row">
+          <label for="password">Password</label>
+          <a class="forgot-link" href="#">Forgot password?</a>
+        </div>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" />
+
+        <button type="submit" class="btn-submit">Sign in</button>
+
+        <div class="divider">
+          <hr class="divider-line" />
+          <span class="divider-text">or</span>
+        </div>
+
+        <button class="btn-social" type="button">
+          <i class="fa-brands fa-google"></i>
+          continue with Google
+        </button>
+
+        <button class="btn-social" type="button">
+          <i class="fa-brands fa-apple"></i>
+          continue with Apple
+        </button>
+
+        <div class="signup-link">
+          <span>New to GitHub?</span>
+          <a href="#signup">Create an account</a>
+        </div>
+      </form>
+    </section>
+
+    <!--  SIGN UP -->
+    <section class="view view-signup">
+      <h2 class="login-topic">Sign up for GitHub</h2>
+
+      <form method="post" action="#">
+        <button class="btn-social btn-social-outline" type="button">
+          <i class="fa-brands fa-google"></i>
+          Continue with Google
+        </button>
+
+        <button class="btn-social btn-social-outline" type="button">
+          <i class="fa-brands fa-apple"></i>
+          Continue with Apple
+        </button>
+
+        <div class="divider">
+          <hr class="divider-line" />
+          <span class="divider-text">or</span>
+        </div>
+
+        <label for="email">Email<span class="req">*</span></label>
+        <input type="text" id="email" name="email" required placeholder="Email" />
+
+        <label for="newpassword">Password<span class="req">*</span></label>
+        <input type="password" id="newpassword" name="newpassword" required placeholder="Password" />
+        <p class="help-text">
+          Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.
+        </p>
+
+        <label for="newusername">Username<span class="req">*</span></label>
+        <input type="text" id="newusername" name="newusername" required placeholder="Username" />
+        <p class="help-text">
+          Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen.
+        </p>
+
+        <label for="country">Your Country/Region<span class="req">*</span></label>
+        <select id="country" name="country" required class="select">
+          <option value="Thailand" selected>Thailand</option>
+          <option value="United States">United States</option>
+          <option value="Japan">Japan</option>
+          <option value="Singapore">Singapore</option>
+        </select>
+        <p class="help-text">
+          For compliance reasons, we're required to collect country information to send you occasional updates and announcements.
+        </p>
+
+        <div class="pref">
+          <div class="pref-title">Email preferences</div>
+          <label class="checkbox-row">
+            <input type="checkbox" name="email_pref" />
+            <span>Receive occasional product updates and announcements</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit btn-submit-dark">
+          Create account <span class="arrow">›</span>
+        </button>
+
+        <div class="signup-link">
+          <span>Already have an account?</span>
+          <a href="#signin">Sign in</a>
+        </div>
+      </form>
+    </section>
+
+  </div>
+</body>
+</html>
